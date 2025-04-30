@@ -423,7 +423,7 @@ a.button:hover
   header {
     flex-direction: row;
     justify-content: space-between;
-    padding: 16px 30px;
+    padding: 16px 22px;
     background-position: center top;
   }
 
