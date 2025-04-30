@@ -1,0 +1,477 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body 
+{
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f1b;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 80px;
+  background-image: url('assets/images/nav.webp');
+  background-size: cover;
+  background-position: -3px top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.4s ease, background-color 0.4s ease;
+}
+
+header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 500;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+header nav a:hover {
+  opacity: 1;
+}
+
+header nav a.active {
+  opacity: 1;
+  font-weight: 700;
+  color: #8f00ff;
+}
+
+.logo-img {
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+section
+{
+  padding: 80px 20px;
+}
+
+h2 
+{ 
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #8f00ff;
+}
+
+#education {
+  padding: 80px 20px;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 40px auto 0;
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #8f00ff;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: #8f00ff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.timeline-content {
+  background: #1c1c2d;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.timeline-content:hover {
+  background: #27293d;
+  transform: translateY(-5px);
+}
+
+.timeline-content h3 {
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+  color: #9b5de5;
+}
+
+.timeline-content p {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+#skills {
+  padding: 60px 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #8f00ff;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid #8f00ff;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(143, 0, 255, 0.5);
+}
+
+.skill-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+#projects {
+  padding: 80px 20px;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8f00ff;
+  margin-bottom: 40px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #1c1c2d;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  background: #27293d;
+}
+
+.project-card h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  color: #bbb;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.project-card .tech-stack {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card .tech-stack .hashtag {
+  font-size: 1.0rem;
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 6px 12px;
+  margin: 5px 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  /* font-weight: 600; */
+}
+
+.project-card .tech-stack .hashtag:hover {
+  background-color: #8f00ff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.project-card .button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #8f00ff;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.project-card .button:hover {
+  background: #6d00c7;
+}
+
+footer
+{
+  text-align: center;
+  padding: 30px 20px;
+  background: #1c1c2d;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+a.button
+{
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 20px;
+  background-color: #8f00ff;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+a.button:hover
+{
+  background: #6d00c7;
+}
+.hero
+{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('assets/images/bg.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 0px;
+  background-attachment: scroll;
+  padding: 0 2% 0 8%;
+  color: white;
+}
+.hero-content
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 685px;
+  margin-bottom: 150px;
+  margin-left: -70px;
+}
+.hero-left h1
+{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero-left span
+{
+  color: #9b5de5;
+}
+.wave 
+{
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+  
+@keyframes wave-animation
+{
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+#typed
+{
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 600;
+}
+.typed-cursor
+{
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: white !important;
+}
+
+#contact {
+  padding: 4rem 1rem;
+  background: #0f0f1b;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-card {
+  background: #1a1a2e;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+.contact-card form input,
+.contact-card form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #10101a;
+  color: #fff;
+}
+
+.contact-card form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #8f00ff;
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-card form button:hover {
+  background-color: #6d00c7;
+}
+
+.social-icons-outside {
+  margin-top: 2rem;
+}
+
+.social-icons-outside a {
+  margin: 0 0.8rem;
+  color: rgb(174, 174, 174);
+  font-size: 2rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons-outside a:hover {
+  transform: scale(1.2);
+  color: white;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.scroll-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 30px;
+    background-position: center top;
+  }
+
+  .logo-img {
+    height: 18px !important;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  header nav a {
+    font-size: 1em;
+    margin: 0 10px;
+  }
+
+  .hero {
+    background-image: url('assets/images/mobile3.webp');
+    background-position: center top;
+    background-size: cover;
+    padding: 80px 5% 40px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  #typed {
+    font-size: 1rem;
+  }
+
+  .typed-cursor {
+    font-size: 1.2rem;
+  }
+}
